@@ -1,39 +1,39 @@
-let users = [];
+// let users = [];
 
 
-function addUser(username) {
+// function addUser(username) {
     
-    let existingUser = users.find(user => user.username === username);
-    if (!existingUser) {
+//     let existingUser = users.find(user => user.username === username);
+//     if (!existingUser) {
         
-        users.push({ username: username, followers: [] });
-    }
+//         users.push({ username: username, followers: [] });
+//     }
 
-function addFollower(username, followerUsername) {
+// function addFollower(username, followerUsername) {
     
-    let user = users.find(user => user.username === username);
-    if (user) {
+//     let user = users.find(user => user.username === username);
+//     if (user) {
         
-        let isAlreadyFollowing = user.followers.includes(followerUsername);
-        if (!isAlreadyFollowing) {
+//         let isAlreadyFollowing = user.followers.includes(followerUsername);
+//         if (!isAlreadyFollowing) {
             
-            user.followers.push(followerUsername);
-        }
-    }
-}
-}
-addUser('Alice');
-addUser('Bob');
-addUser('Charlie')
+//             user.followers.push(followerUsername);
+//         }
+//     }
+// }
+// }
+// addUser('Alice');
+// addUser('Bob');
+// addUser('Charlie')
 
 
-addFollower('Alice', 'Bob');
+// addFollower('Alice', 'Bob');
 
 
-addFollower('Alice', 'Charlie');
+// addFollower('Alice', 'Charlie');
 
 
-console.log(users.find(user => user.username === 'Alice').followers); // Output: ['Bob', 'Charlie']
+// console.log(users.find(user => user.username === 'Alice').followers); // Output: ['Bob', 'Charlie']
 
 
 //2
@@ -55,3 +55,19 @@ const Jane = new following("Jane")
 Jane.addUser("Faith")
 console.log(Jane)
 
+
+
+
+function checkVowels(word){
+    let words=char.toLowercase()
+    for (let i=0;i<word.length;i++){
+        if(word===vowels[i]){
+            console.log(`${word[i]}is a vowel`)
+        }
+        else{
+            console.log(`${word[i]}is consonat`)
+        }
+    }
+}
+checkVowels('banana')
+let vowels=["a","e","i","o","u"]
